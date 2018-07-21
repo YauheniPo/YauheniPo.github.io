@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--тип документа-->
+<html>
+<head>
+    <meta charset='utf-8'>
+    <!--meta-работа с текстом,charset-кодировка, название кодировки</-->
+    <title>Evgenii Popovich</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="content">
+            <div id="header">
+                <a href="../index.php">Main</a>/
+                <a href="about_me.php">About Me</a>/
+                <a href="photo.php">Photo</a>
+            </div>
+            <div id="">
+                 <h1>Junior Java Developer</h1><!--заголовок первого уровня</-->
+            </div>
+            <div id="center">
+                <p><img id="knowledge" src="../img/knowledge.PNG" height="350">
+                    <b>Page layout: </b> • Adobe Assets.<br>
+                    <b>Virtualization tools: </b> • VirtualBox..<br>
+                    <b>Version control systems: </b> • Git; • GitHub Desktop; • SmartGit.<br>
+                    <b>Development tools: </b> • Eclipse; • IntelliJ IDEA; • Workbench; • HeidiSQL; • Brackets; • Sublime Text; • DBSchema.<br>
+                </p>
+                <br>
+                <div id="skills">
+                    <p>
+                        <b>Soft skills: </b>
+                        <br>• proactive (turn the problem over, ask questions and bring things forward, try and experiment);<br>• good organization skills (reasoning, planning, priority assignment for the solution of the problem); 
+                        <br>• the ability of get into the nuts and bolts (to look at the situation 'from the above', aptitude for learning, pass an opinion, work structuring);<br>• commitment (assess risks, defend decisions, analyze the impact on the work process); 
+                        <br>• communicate confidently and work closely with other developers and professionals;<br>• tech savvy, highly motivated, energetic, creative, imaginative.
+                        <br>
+                        <b>Education: </b>
+                        <br>• BNTU, Mechanical engineering (2008-2013).
+                        <br>
+                        <b>Courses: </b>
+                        <br>• 2017:  IT Academy. Java Fundamentals;<br>• 2017:  GeekBrains Online Courses. Online Courses and Webinars;<br>• 2017:  Udemy Online Courses. Java Programming Language;<br>• 2016:  IBA Group . Java Programming Language;
+                        <br>• 2016: Javarush  Online Courses. Java Programming Language.
+                        <br>
+                        <b>Certifications: </b>
+                        <br>• 2017:  IT Academy «Java Fundamentals»;<br>• 2017:  GeekBrains «Java. Intermediate»;<br>• 2017:  GeekBrains «English language. Pre-intermediate»;<br>• 2017:  GeekBrains «Java. Beginner»;
+                        <br>• 2017:  GeekBrains «HTML&CSS. Beginner»;<br>• 2017:  GeekBrains «Introduction To Programming. Beginner»;<br>• 2017:  GeekBrains «Java Intensive Course. Introduction to Programming Language»;
+                        <br>• 2017:  GeekBrains «Introduction to Programming. Online Course»;<br>• 2016:  IBA Group «Java Programming Language».
+                        <br>
+                        <b>Experience: </b>
+                        <br>I'm making a web service for developing skills and learning new technologies.
+                        <br>The project represents a website, which offers customers 3 types of services related to travelling:
+                        <br>-Tour agency
+                        <br>-Hotel room rental
+                        <br>-Car rental
+                        <br>User performs following functions:
+                        <br>-registration;
+                        <br>-logging in;
+                        <br>-browsing three catalogues: tour offers, apartments and cars;
+                        <br>-using multicriteria sorting in catalogues;
+                        <br>-choosing an offer and making an order;
+                        <br>-receiving a bill for the order;
+                        <br>-account info editing;
+                        <br>-logging out.
+                        <br>Admin performs following functions:
+                        <br>-adding new offers to catalogues: tour offers, apartments and cars;
+                        <br>-marking damaged cars and creating a bill for the clients;
+                        <br>-fetching info about orders: by service, by user, by period.
+                        <br>
+                        <br>Development of JSP and Servlet, development of client graphical user interfaces using HTML, CSS, JQuery and JavaScript for client-side validation in JSP and HTML pages. 
+                        Developed database for the application. Common resources and log4j logging framework are used. Modular testing, system testing and integration using JUnit and Selenium tests were performed. 
+                        Testing applications and troubleshooting / debugging. GIT is used as a repository for the project's application folders.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            Copyright &copy; <?php echo date("Y");?><a href="mailto:ip.popovich.1990@gmail.com">YauheniPo</a> - All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
