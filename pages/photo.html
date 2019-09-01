@@ -1,64 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset='UTF-8'>
     <title>Evgenii Popovich's Photo</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="engine0/style.css" />
+    <link rel="stylesheet" type="text/css" href="engine0/style.css"/>
     <link rel="shortcut icon" href="../img/favicon.ico">
     <script type="text/javascript" src="engine0/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+body { background-color: #fff; color: #000; padding: 0; margin: 0; }
+.container { margin: auto; padding-top: 1em; }
+.container .ism-slider { margin-left: auto; margin-right: auto; }
+    </style>
+    <link rel="stylesheet" href="ism/css/my-slider.css"/>
+    <script src="ism/js/ism-2.2.min.js"></script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <div id="content">
-            <div id="header">
-                <a href="../index.html">Main</a>/
-<!--                <a href="about_me.html">About Me</a>/-->
-                <a href="photo.html">Photo</a>
-            </div>
-            <div id="">
-                <h1>Evgeny Popovich</h1><!--заголовок первого уровня</-->
-            </div>
-            <div id="wowslider-container0">
-                <div class="ws_images">
-                    <ul>
-                        <li><img src="data0/images/photo1.jpg" alt="YauheniPo" title="" id="wows0_0" /></li>
-                        <li><img src="data0/images/photo2.jpg" alt="YauheniPo" title="" id="wows0_1" /></li>
-                        <li><img src="data0/images/photo3.jpg" alt="YauheniPo" title="" id="wows0_2" /></li>
-                        <li><img src="data0/images/photo4.jpg" alt="YauheniPo" title="" id="wows0_3" /></li>
-                        <li><img src="data0/images/photo5.jpg" alt="YauheniPo" title="" id="wows0_4" /></li>
-                        <li>
-                            <a href="http://wowslider.net"><img src="data0/images/photo6.jpg" alt="css slideshow" title="" id="wows0_5" /></a>
-                        </li>
-                        <li><img src="data0/images/photo7.jpg" alt="YauheniPo" title="" id="wows0_6" /></li>
-                    </ul>
-                </div>
-                <div class="ws_bullets">
-                    <div>
-                        <a href="#" title=""><span><img src="data0/tooltips/photo1.jpg" alt="YauheniPo"/>1</span></a>
-                        <a href="#" title=""><span><img src="data0/tooltips/photo2.jpg" alt="YauheniPo"/>2</span></a>
-                        <a href="#" title=""><span><img src="data0/tooltips/photo3.jpg" alt="YauheniPo"/>3</span></a>
-                        <a href="#" title=""><span><img src="data0/tooltips/photo4.jpg" alt="YauheniPo"/>4</span></a>
-                        <a href="#" title=""><span><img src="data0/tooltips/photo5.jpg" alt="YauheniPo"/>5</span></a>
-                        <a href="#" title=""><span><img src="data0/tooltips/photo6.jpg" alt="YauheniPo"/>6</span></a>
-                        <a href="#" title=""><span><img src="data0/tooltips/photo7.jpg" alt="YauheniPo"/>7</span></a>
-                    </div>
-                </div>
-                <div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">html5 slideshow</a> by WOWSlider.com v8.8</div>
-                <div class="ws_shadow"></div>
-            </div>
-            <div id="center">
-
-            </div>
+<div id="wrapper">
+    <div id="content">
+        <div id="header">
+            <a href="../index.html">Main</a>/
+            <!--                <a href="about_me.html">About Me</a>/-->
+            <a href="photo.html">Photo</a>
         </div>
-        <div id="footer">
-            <a href="mailto:ip.popovich.1990@gmail.com">Evgeny Popovich</a>
+        <div id="">
+            <h1>Evgeny Popovich</h1><!--заголовок первого уровня</-->
+        </div>
+        <div class='container'>
+            <div class="ism-slider" id="my-slider">
+                <ol>
+                    <li>
+                        <img src="data0/images/photo1.jpg">
+                    </li>
+                    <li>
+                        <img src="data0/images/photo2.jpg">
+                    </li>
+                    <li>
+                        <img src="data0/images/photo3.jpg">
+                    </li>
+                    <li>
+                        <img src="data0/images/photo4.jpg">
+                    </li>
+                    <li>
+                        <img src="data0/images/photo5.jpg">
+                    </li>
+                    <li>
+                        <img src="data0/images/photo6.jpg">
+                    </li>
+                    <li>
+                        <img src="data0/images/photo7.jpg">
+                    </li>
+                </ol>
+            </div>
         </div>
     </div>
-    <script type="text/javascript" src="engine0/wowslider.js"></script>
-    <script type="text/javascript" src="engine0/script.js"></script>
+    <div id="footer">
+        <a href="mailto:ip.popovich.1990@gmail.com">Evgeny Popovich - Software Test Automation Engineer</a>
+    </div>
+</div>
 </body>
-
 </html>
