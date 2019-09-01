@@ -46,6 +46,7 @@ body {
 
 #contacts {
     text-align: right;
+/*    text-align: center;*/
 }
 
 #mail {
@@ -72,15 +73,25 @@ body {
     min-width: 1200px;
     text-align: center;
     color: #2e353d;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 300;
-    margin-top: 35px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#content h2 {
+    min-width: 1200px;
+    text-align: center;
+    color: #2e353d;
+    font-size: 30px;
+    font-weight: 250;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
 #avatar {    
-    width: 250px;
-	padding: 10px;
+    width: 450px;
+/*	padding: 10px;*/
 }
 
 #knowledge {
@@ -98,23 +109,24 @@ body {
 }
 
 #content #box_text {
-    width: 800px;
-    background-color: #ffffff;
+    width: 630px;
+/*    background-color: #ffffff;*/
     float: right;
     padding: 10px 10px 10px 10px;
     margin-bottom:10px;
+    
 }
 
-#content #box_text p {
+#content #box_text i {
     color: #242424;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 100;
-    margin-bottom: 8px;
+    margin-bottom: 45px;
 }
 
-#content #box_text a  {
+#content #box_text a {
     color: #40678a;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 100;
     text-align: center;
     text-decoration: none;
