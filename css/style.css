@@ -153,65 +153,18 @@ body {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    border: none;
-    border-radius: 25px; /* закругленные углы */
-    background: linear-gradient(45deg, #f06, #9f6); /* градиент */
-    color: white;
+    border: 2px solid #007bff; /* Голубая рамка вокруг кнопки */
+    border-radius: 5px;
+    background-color: transparent; /* Прозрачный фон */
+    color: #007bff; /* Голубой текст */
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* слегка приподнятая тень */
-    transition: all 0.3s; /* плавный переход */
-    position: relative;
-    overflow: hidden;
+    transition: all 0.3s;
 }
 
 .button:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px); /* приподнять кнопку при наведении */
-}
-
-.button:active {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(0); /* вернуть кнопку в исходное положение при нажатии */
-}
-
-.button span {
-    position: relative;
-    z-index: 1;
-}
-
-.button:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 2px;
-    background: white;
-    transition: all 0.3s;
-}
-
-.button:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: white;
-    transition: all 0.3s;
-}
-
-.button:hover:before {
-    left: 0;
-    right: auto;
-    width: 100%;
-}
-
-.button:hover:after {
-    right: 0;
-    left: auto;
-    width: 100%;
+    background-color: #007bff; /* Голубой фон при наведении */
+    color: white; /* Белый текст при наведении */
 }
 
 /* Медиа-запрос для планшетов и мобильных устройств */
