@@ -56,7 +56,7 @@ body {
 #center {
     width: 900px;
     margin: 0 auto;
-    padding-bottom:50px;
+    padding-bottom: 10px;
 }
 
 #skills {
@@ -113,15 +113,14 @@ body {
 /*    background-color: #ffffff;*/
     float: right;
     padding: 10px 10px 10px 10px;
-    margin-bottom:10px;
-    
+    margin-bottom: 10px;
 }
 
 #content #box_text i {
     color: #242424;
     font-size: 40px;
     font-weight: 100;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 #content #box_text a {
@@ -150,28 +149,66 @@ body {
     color: inherit;
 }
 
-.download-button {
+.button {
     display: inline-block;
-    padding: 5px 15px; /* уменьшенные отступы */
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white; /* белый цвет текста для лучшей видимости */
-    text-align: center; /* центрирование текста */
+    border-radius: 25px; /* закругленные углы */
+    background: linear-gradient(45deg, #f06, #9f6); /* градиент */
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 14px; /* установите размер шрифта, который вам подходит */
-    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* слегка приподнятая тень */
+    transition: all 0.3s; /* плавный переход */
+    position: relative;
+    overflow: hidden;
 }
 
-.download-button i {
-    margin-left: 5px; /* отступ для иконки */
+.button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px); /* приподнять кнопку при наведении */
 }
 
-.download-button:hover {
-    background-color: #0056b3;
+.button:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(0); /* вернуть кнопку в исходное положение при нажатии */
 }
 
-.download-button:active {
-    transform: scale(0.95);
+.button span {
+    position: relative;
+    z-index: 1;
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.3s;
+}
+
+.button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.3s;
+}
+
+.button:hover:before {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+.button:hover:after {
+    right: 0;
+    left: auto;
+    width: 100%;
 }
