@@ -152,14 +152,20 @@ body {
 
 .download-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 15px; /* уменьшенные отступы */
     border: none;
     border-radius: 5px;
     background-color: #007bff;
-    color: white;
+    color: white; /* белый цвет текста для лучшей видимости */
+    text-align: center; /* центрирование текста */
     text-decoration: none;
     font-weight: bold;
+    font-size: 14px; /* установите размер шрифта, который вам подходит */
     transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-button i {
+    margin-left: 5px; /* отступ для иконки */
 }
 
 .download-button:hover {
