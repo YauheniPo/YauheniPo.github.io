@@ -65,19 +65,19 @@
         <h2>Business Impact</h2>
         <div class="metric-grid">
             <article class="metric-card">
-                <p class="metric-value"><span data-counter data-target="85" data-suffix="%">0</span></p>
+                <p class="metric-value"><span data-counter data-target="85" data-suffix="%">85%</span></p>
                 <p class="metric-label">Lower flaky stream test load via mock streams</p>
             </article>
             <article class="metric-card">
-                <p class="metric-value"><span data-counter data-target="98" data-suffix="%">0</span></p>
+                <p class="metric-value"><span data-counter data-target="98" data-suffix="%">98%</span></p>
                 <p class="metric-label">Autotest pass rate with parallel execution stability</p>
             </article>
             <article class="metric-card">
-                <p class="metric-value"><span data-counter data-target="50" data-suffix="%">0</span></p>
+                <p class="metric-value"><span data-counter data-target="50" data-suffix="%">50%</span></p>
                 <p class="metric-label">Faster testing-to-production flow after CI/CD transformation</p>
             </article>
             <article class="metric-card">
-                <p class="metric-value"><span data-counter data-target="30" data-suffix="+">0</span></p>
+                <p class="metric-value"><span data-counter data-target="30" data-suffix="+">30+</span></p>
                 <p class="metric-label">Technical interviews for QA/AQA hiring decisions</p>
             </article>
         </div>
@@ -148,6 +148,90 @@
     <p>© <span id="current-year"></span> Yauheni Papovich · AQA Tech Lead</p>
 </footer>
 
-<script src="js/main.js"></script>
+<script>
+    (() => {
+        const revealNodes = document.querySelectorAll("[data-reveal]");
+        const counterNodes = document.querySelectorAll("[data-counter]");
+        const currentYearElement = document.getElementById("current-year");
+
+        if (currentYearElement) {
+            currentYearElement.textContent = String(new Date().getFullYear());
+        }
+
+        const supportsAnimation =
+            "IntersectionObserver" in window &&
+            "requestAnimationFrame" in window &&
+            typeof window.matchMedia === "function";
+
+        if (!supportsAnimation) {
+            revealNodes.forEach((node) => node.classList.add("visible"));
+            counterNodes.forEach((node) => {
+                node.textContent = `${node.dataset.target || "0"}${node.dataset.suffix || ""}`;
+            });
+            return;
+        }
+
+        document.documentElement.classList.add("js-ready");
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        if (prefersReducedMotion) {
+            revealNodes.forEach((node) => node.classList.add("visible"));
+        } else {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {threshold: 0.16});
+
+            revealNodes.forEach((node) => revealObserver.observe(node));
+        }
+
+        const animatedCounters = new WeakSet();
+
+        function animateCounter(node) {
+            if (animatedCounters.has(node)) {
+                return;
+            }
+            animatedCounters.add(node);
+
+            const target = Number(node.dataset.target || 0);
+            const suffix = node.dataset.suffix || "";
+            const durationMs = 1300;
+            const start = performance.now();
+            node.textContent = `0${suffix}`;
+
+            function tick(now) {
+                const progress = Math.min((now - start) / durationMs, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(target * eased);
+                node.textContent = `${current}${suffix}`;
+                if (progress < 1) {
+                    requestAnimationFrame(tick);
+                }
+            }
+
+            requestAnimationFrame(tick);
+        }
+
+        if (prefersReducedMotion) {
+            counterNodes.forEach((node) => {
+                node.textContent = `${node.dataset.target || "0"}${node.dataset.suffix || ""}`;
+            });
+        } else {
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                    }
+                });
+            }, {threshold: 0.5});
+
+            counterNodes.forEach((node) => counterObserver.observe(node));
+        }
+    })();
+</script>
 </body>
 </html>
